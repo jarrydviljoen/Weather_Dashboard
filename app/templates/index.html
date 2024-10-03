@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <div class="sidebar">
+            <div class="search-box">
+                <input type="text" placeholder="Search for places">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="current-weather">
+                <h1>28°C</h1>
+                <p>Scattered Clouds</p>
+                <div class="weather-details">
+                    <p>Jun 12, 2018 - 3:03 PM</p>
+                    <p>Bengaluru, IN</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <!-- Temperature Chart -->
+            <div class="temperature-chart">
+                <canvas id="temperature-chart"></canvas>
+            </div>
+            <!-- Highlights Section -->
+            <div class="highlights">
+                <h2>Today's Highlights</h2>
+                <div class="highlight-cards">
+                    <div class="highlight-card">
+                        <h3>UV Index</h3>
+                        <div class="highlight-content">
+                            <p class="highlight-value">4</p>
+                            <p>Low</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Wind Status</h3>
+                        <div class="highlight-content">
+                            <p class="highlight-value">7.7 km/h</p>
+                            <p>WSW</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Sunrise & Sunset</h3>
+                        <div class="highlight-content">
+                            <p>Sunrise: 5:52 AM</p>
+                            <p>Sunset: 6:45 PM</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Humidity</h3>
+                        <div class="highlight-content">
+                            <p class="highlight-value">63%</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Visibility</h3>
+                        <div class="highlight-content">
+                            <p class="highlight-value">12 km</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Air Quality</h3>
+                        <div class="highlight-content">
+                            <p class="highlight-value">101</p>
+                            <p>Unhealthy for Sensitive Groups</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Temperature Chart
+        var ctx = document.getElementById('temperature-chart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['12:00 PM', '3:00 PM', '6:00 PM', '9:00 PM'],
+                datasets: [{
+                    label: 'Temperature',
+                    data: [28, 29, 27, 26],
+                    borderColor: '#4aa3f3',
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.4,
+                    pointRadius: 4,
+                    pointBackgroundColor: '#4aa3f3'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: '#a0a0a0'
+                        }
+                    },
+                    y: {
+                        beginAtZero: false,
+                        grid: {
+                            color: '#e0e0e0'
+                        },
+                        ticks: {
+                            color: '#a0a0a0'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
