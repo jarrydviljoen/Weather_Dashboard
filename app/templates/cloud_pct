@@ -1,0 +1,9 @@
+ <th style="width: 22%;"> CLOUD_PCT </th>
+ <th style="width: 22%;"> FEELS-LIKE </th>
+ <th style="width: 22%;"> HUMIDITY</th>
+ <th style="width: 22%;">MAX-TEMP</th>
+ <th style="width: 22%;">MIN-TEMPSUNRISE</th>
+ <th style="width: 22%;"> SUNSET</th>
+ <th style="width: 22%;"> TEMP</th>
+ <th style="width: 22%;"> WIND_DEGREES</th>
+ <th style="width: 22%;"> WIND_SPEED</th>
