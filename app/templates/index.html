@@ -1,0 +1,31 @@
+<!-- templates/index.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+    <div class="container">
+        <section class="search-section">
+            <form id="search-form">
+                <input type="text" id="city-input" placeholder="Enter city name" required>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section id="current-weather" class="weather-section">
+            <!-- Current weather data will be displayed here -->
+        </section>
+
+        <section id="forecast" class="forecast-section">
+            <h2>5-Day Forecast</h2>
+            <div id="forecast-container">
+                <!-- Forecast items will be displayed here -->
+            </div>
+        </section>
+
+        <section id="air-quality" class="air-quality-section">
+            <!-- Air quality data will be displayed here -->
+        </section>
+    </div>
+</main>
+{% endblock %}
