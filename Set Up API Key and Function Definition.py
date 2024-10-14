@@ -22,3 +22,16 @@ location = input("Enter the city name: ").strip()  # Get user input and remove e
 
 # Retrieve the climatic information
 weather_data = get_weather_data(api_key, location)
+# Display the weather data if it's valid
+if weather_data:
+    temp = weather_data['main']['temp']  # Measure the temperature
+    description = weather_data['weather'][0]['description']  # Measure weather description
+    humidity = weather_data['main']['humidity']  # Measure humidity
+    wind_speed = weather_data['wind']['speed']  # Measure wind speed
+    
+    # Print the weather information
+    print(f"The current temperature in {location} is {temp}°C with {description}.")
+    print(f"Humidity: {humidity}%")
+    print(f"Wind Speed: {wind_speed} m/s")
+else:
+    print("Could not retrieve weather data.")
