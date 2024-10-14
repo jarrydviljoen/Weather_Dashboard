@@ -12,7 +12,7 @@ async def read_root():
     return {"message": "Welcome to the Weather Dashboard API!"}
 
 # Initialize the WeatherAPI with the real API key
-api_key = "tbb1YeTlEElpzlqCPTNvDmznoTBcAxB3"  # Replace with your actual API key
+api_key = "tbb1YeTlEElpzlqCPTNvDmznoTBcAxB3"  
 weather_api = WeatherAPI(api_key)
 
 @app.get("/current_weather/{city_name}")
