@@ -17,3 +17,8 @@ def get_weather_data(api_key, location):
         print("Error:", response.status_code)  # Print the error code
         print(response.text)  # Print the error message from the API
         return None
+# Prompt for city name
+location = input("Enter the city name: ").strip()  # Get user input and remove extra spaces
+
+# Retrieve the climatic information
+weather_data = get_weather_data(api_key, location)
