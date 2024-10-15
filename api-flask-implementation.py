@@ -19,3 +19,11 @@ def get_weather():
     
     # Send the request to the API
     response = requests.get(url)
+    # Check if the request was successful
+    if response.status_code == 200:
+        return jsonify(response.json())  # Return the weather data as JSON
+    else:
+        return jsonify({"error": "City not found."}), 404
+
+if __name__ == '__main__':
+    app.run(debug=True)
