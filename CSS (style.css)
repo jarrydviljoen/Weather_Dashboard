@@ -42,6 +42,7 @@ body {
 .forecast {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 30px;
 }
 
 .day {
@@ -56,4 +57,13 @@ body {
 .day p {
     margin-top: 10px;
     font-size: 1.2em;
+}
+
+/* Chart styling */
+.chart-container {
+    margin: 20px 0;
+}
+#temperatureChart {
+    max-width: 100%;
+    height: auto;
 }
