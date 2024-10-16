@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
 </head>
 <body>
     <div class="weather-dashboard">
@@ -13,6 +14,7 @@
             <p id="condition">Sunny</p>
             <img id="weather-icon" src="sunny.png" alt="Weather Icon">
         </div>
+        
         <div class="forecast">
             <div class="day">
                 <p>Monday</p>
@@ -30,7 +32,13 @@
                 <p>High: 28°C Low: 20°C</p>
             </div>
         </div>
+        
+        <!-- Add a canvas for the temperature chart -->
+        <div class="chart-container">
+            <canvas id="temperatureChart"></canvas>
+        </div>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
