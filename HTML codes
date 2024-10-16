@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-dashboard">
+        <div class="current-weather">
+            <h1 id="temperature">25°C</h1>
+            <p id="condition">Sunny</p>
+            <img id="weather-icon" src="sunny.png" alt="Weather Icon">
+        </div>
+        <div class="forecast">
+            <div class="day">
+                <p>Monday</p>
+                <img src="cloudy.png" alt="Cloudy Icon">
+                <p>High: 24°C Low: 18°C</p>
+            </div>
+            <div class="day">
+                <p>Tuesday</p>
+                <img src="rainy.png" alt="Rainy Icon">
+                <p>High: 22°C Low: 16°C</p>
+            </div>
+            <div class="day">
+                <p>Wednesday</p>
+                <img src="sunny.png" alt="Sunny Icon">
+                <p>High: 28°C Low: 20°C</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
