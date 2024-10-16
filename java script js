@@ -1,0 +1,57 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // Mock data: This can be fetched from a real weather API in future
+    const forecastData = {
+        days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        highTemperatures: [24, 22, 28, 26, 27],
+        lowTemperatures: [18, 16, 20, 19, 21]
+    };
+
+    // Get the chart context from the canvas
+    const ctx = document.getElementById('temperatureChart').getContext('2d');
+
+    // Create a line chart using Chart.js
+    const temperatureChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: forecastData.days,
+            datasets: [
+                {
+                    label: 'High Temperature (°C)',
+                    data: forecastData.highTemperatures,
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4
+                },
+                {
+                    label: 'Low Temperature (°C)',
+                    data: forecastData.lowTemperatures,
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    title: {
+                        display: true,
+                        text: 'Temperature (°C)'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Days'
+                    }
+                }
+            }
+        }
+    });
+});
