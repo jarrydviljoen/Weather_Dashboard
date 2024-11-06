@@ -1,18 +1,21 @@
-# Weather Dashboard
 
-The Weather Dashboard is a full-stack web application that provides real-time weather information, 5-day forecasts, and air quality data for a specified city. Built with Node.js, Express, HTML, CSS, and JavaScript, this application integrates with the OpenWeatherMap API to deliver comprehensive and up-to-date weather information.
+# Weather Dashboard Project
+
+A weather dashboard web application that provides users with weather updates and forecasts using OpenWeatherMap and AccuWeather APIs. This project includes client-side visualizations with charts and icons, automated tests, and optimized styling using FastHTML and CSS.
 
 ## Table of Contents
+- [Project Summary](#project-summary)
 - [Project Structure](#project-structure)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [API Integration](#api-integration)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Testing and Validation](#testing-and-validation)
-- [Challenges and Solutions](#challenges-and-solutions)
-- [Future Enhancements](#future-enhancements)
-- [License](#license)
+- [Setup Instructions](#setup-instructions)
+- [Development Process Overview](#development-process-overview)
+- [Running the Server](#running-the-server)
+- [Testing](#testing)
+- [Future Improvements](#future-improvements)
+
+## Project Summary
+This weather dashboard allows users to access real-time weather information and forecasts, view data visualizations, and receive updates on precipitation, temperature, and other weather conditions. The project leverages FastHTML for HTML templating and features a responsive, user-friendly interface.
 
 ## Project Structure
 
@@ -27,10 +30,6 @@ The Weather Dashboard is a full-stack web application that provides real-time we
 - **index.js**: Middleware and content negotiation functions for efficient response handling.
 - **package.json** & **package-lock.json**: Manage dependencies and include scripts for server startup, testing, and linting.
 
-### Additional Files
-- **LICENSE**: Contains licensing information for the project.
-- **HISTORY.md**: Tracks changes and version history for the project.
-
 ## Features
 
 - **Current Weather Display**: Real-time data on temperature, humidity, wind speed, and conditions.
@@ -43,65 +42,65 @@ The Weather Dashboard is a full-stack web application that provides real-time we
 - **Frontend**: HTML, CSS, JavaScript, Chart.js
 - **Backend**: Node.js, Express.js
 - **API**: OpenWeatherMap API
-- **Testing**: Mocha, NYC
-- **Code Quality**: ESLint
+- **Testing**: Mocha
 
 ## API Integration
 
-The Weather Dashboard integrates with the OpenWeatherMap API for weather and air quality data:
+- **Openweathermap**: This API was used to retieve precipitation data for the bar chart.
+- **Accuweather**: This API was used for all the other data including current weather and 5-forecast.
 
-1. **Current Weather API**
-   - **Endpoint**: `https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_KEY}`
-   - **Data Provided**: Current temperature, humidity, wind speed, and weather conditions.
-
-2. **5-Day Forecast API**
-   - **Endpoint**: `https://api.openweathermap.org/data/2.5/forecast?q={city_name}&appid={API_KEY}`
-   - **Data Provided**: Forecast data at 3-hour intervals for five days.
-
-
-The backend (`server.js`) handles API calls and relays data to the frontend, ensuring that users see up-to-date weather and environmental information.
-
-## Installation
-
-1. **Clone the Repository**
+## Setup Instructions
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/weather-dashboard.git
+   git clone https://github.com/jarrydviljoen/weather-dashboard.git
+   cd weather-dashboard
+   ```
 
-   Navigate to the Project Directory
-cd weather-dashboard
-Install Dependencies
-npm install
-Environment Setup
-Create an .env file with your OpenWeatherMap API key:
-API_KEY=your_openweathermap_api_key
-Start the Server
-npm start
-The server will run on http://localhost:3000.
+2. **Install dependencies**:
+   - Use `pip install -r requirements.txt` to install required packages.
+   - Alternatively, if there are issues, manually install:
+     ```bash
+     pip install chartjs nodejs express-py
+     ```
 
-Usage
+3. **Run the server**:
+   - Start the server with:
+     ```bash
+     node server.js
+     ```
+   - The application should be accessible at `http://localhost:3000`.
 
-Open http://localhost:3000 in your web browser.
-Enter a city name in the input field and click "Get Weather" to view current weather details, a 5-day forecast, and air quality data.
-Use the login page (login.html) for authentication features (if implemented).
-Testing and Validation
+## Development Process Overview
+The project was developed with the following features and tools:
+- **Backend**: Node.js, Express, and Python modules for handling API requests and data manipulation.
+- **Frontend**: FastHTML and CSS for styling, with interactive charts powered by Chart.js.
+- **Testing**: Tests were written using Mocha and Chai for both frontend and backend functionality.
+- **Documentation**: Docstrings and comments have been included in the code for clarity.
 
-The project uses Mocha and NYC for testing and coverage, and ESLint for code quality:
+## Running the Server
+To start the application, run the following command in the root directory:
+```bash
+node server.js
+```
 
-Run Tests:
+The server will start on `http://localhost:3000`.
+
+## Testing
+Automated tests are included for key functionalities:
+- **User Registration** and **Login** endpoints
+- **Weather Data Fetching** and **Display**
+
+To run the tests:
+```bash
 npm test
-Code Linting:
-npm run lint
-Testing includes unit tests for API responses, data processing, and frontend data rendering, while linting ensures consistent code style.
+```
 
-Challenges and Solutions
+## Future Improvements
+- Implementing OAuth for secure user authentication.
+- Adding additional data visualizations for air quality, humidity, and wind speed.
+- Expanding the interface to support multiple languages.
+- Integrating caching to improve API response times and reduce load.
 
-API Rate Limits: Managed by implementing error handling to notify users when API limits are reached.
-Cross-Origin Resource Sharing (CORS): Integrated cors middleware in server.js to allow the frontend to communicate with the backend across origins.
-Error Handling: Backend includes mechanisms to handle missing or incorrect data, returning error messages to the frontend for user feedback.
+---
 
-Future Enhancements
-User Authentication: Implement secure authentication, potentially using OAuth or JWT.
-Favorite Cities: Allow users to save and quickly access weather data for favorite cities.
-Enhanced Data Visualization: Add more detailed weather metrics, like humidity and wind speed, to the charts.
-Improved Air Quality Visualization: Display air quality data with more granularity, such as real-time pollutant charts.
-
+This project showcases the integration of modern web development technologies and provides an engaging, functional interface for weather data.
