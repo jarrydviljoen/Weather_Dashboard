@@ -31,8 +31,8 @@ This weather dashboard allows users to access real-time weather information and 
 
 ## Features
 
-- **Current Weather Display**: Real-time data on temperature, humidity, wind speed, and conditions.
-- **5-Day Weather Forecast**: 5-day forecast at 3-hour intervals, displayed as cards for easy viewing.
+- **Current Weather Display**: Real-time data on temperature and conditions.
+- **5-Day Weather Forecast**: 5-day forecast, displayed as cards for easy viewing.
 - **Data Visualization**: Temperature trends and precipitation probability charts using Chart.js.
 - **Responsive Design**: Adapts to various screen sizes, providing a smooth experience on both desktop and mobile.
 
@@ -40,7 +40,7 @@ This weather dashboard allows users to access real-time weather information and 
 
 - **Frontend**: HTML, CSS, JavaScript, Chart.js
 - **Backend**: Node.js, Express.js
-- **API**: OpenWeatherMap API
+- **API**: OpenWeatherMap API, Accuweather API
 - **Testing**: Mocha
 
 ## API Integration
