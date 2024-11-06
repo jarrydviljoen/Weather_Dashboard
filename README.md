@@ -27,7 +27,6 @@ This weather dashboard allows users to access real-time weather information and 
 
 ### Backend
 - **server.js**: Sets up the Express server, handles API requests, and manages routing.
-- **index.js**: Middleware and content negotiation functions for efficient response handling.
 - **package.json** & **package-lock.json**: Manage dependencies and include scripts for server startup, testing, and linting.
 
 ## Features
