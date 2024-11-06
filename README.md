@@ -35,7 +35,6 @@ The Weather Dashboard is a full-stack web application that provides real-time we
 
 - **Current Weather Display**: Real-time data on temperature, humidity, wind speed, and conditions.
 - **5-Day Weather Forecast**: 5-day forecast at 3-hour intervals, displayed as cards for easy viewing.
-- **Air Quality Information**: Air Quality Index (AQI) and pollutant data for the selected city.
 - **Data Visualization**: Temperature trends and precipitation probability charts using Chart.js.
 - **Responsive Design**: Adapts to various screen sizes, providing a smooth experience on both desktop and mobile.
 
@@ -59,9 +58,6 @@ The Weather Dashboard integrates with the OpenWeatherMap API for weather and air
    - **Endpoint**: `https://api.openweathermap.org/data/2.5/forecast?q={city_name}&appid={API_KEY}`
    - **Data Provided**: Forecast data at 3-hour intervals for five days.
 
-3. **Air Quality API**
-   - **Endpoint**: `https://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={API_KEY}`
-   - **Data Provided**: Air Quality Index (AQI) and pollutant levels (e.g., PM2.5, CO).
 
 The backend (`server.js`) handles API calls and relays data to the frontend, ensuring that users see up-to-date weather and environmental information.
 
