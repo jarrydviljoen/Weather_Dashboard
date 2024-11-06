@@ -1,0 +1,145 @@
+/* Global reset: removes default margin, padding, and applies border-box box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles: Sets font, colors, layout, and background image */
+body {
+  font-family: Arial, sans-serif; /* Sets font to Arial */
+  color: #333; /* Dark grey text color */
+  display: flex; /* Flexbox layout for centering content */
+  flex-direction: column; /* Aligns content vertically */
+  align-items: center; /* Centers content horizontally */
+  height: 100vh; /* Full viewport height */
+  
+  /* Background Image for the Website */
+  background-image: url('weather.jpeg.webp'); /* Background image */
+  background-size: cover; /* Cover the entire page */
+  background-position: center; /* Center the background */
+  background-repeat: no-repeat; /* Prevent background from repeating */
+  background-attachment: fixed; /* Keeps background fixed during scrolling */
+}
+
+/* Container styles: Centered box with padding, shadow, and transparency */
+.container {
+  width: 80%; /* 80% of the viewport width */
+  max-width: 900px; /* Maximum width of 900px */
+  margin-top: 20px; /* Adds spacing at the top */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  padding: 20px; /* Padding inside the container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Centers text inside the container */
+}
+
+/* Header styles: Specific to h1 elements */
+h1 {
+  margin-bottom: 20px; /* Adds spacing below the heading */
+  color: #0073e6; /* Blue color for the header */
+}
+
+/* Input and button styles: Consistent padding and font size for form elements */
+input,
+button {
+  padding: 10px; /* Padding inside inputs and buttons */
+  margin: 10px 5px; /* Margin between form elements */
+  font-size: 1em; /* Standard font size */
+}
+
+/* Button styles: Background color, text color, and border styling */
+button {
+  background-color: #0073e6; /* Blue background */
+  color: white; /* White text */
+  border: none; /* Removes default border */
+  cursor: pointer; /* Shows pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Weather section styles: Adds spacing and formatting to weather data */
+.weather-section {
+  margin-top: 20px; /* Adds spacing at the top */
+}
+
+/* Weather section heading styles */
+.weather-section h2 {
+  margin-bottom: 10px; /* Adds spacing below the heading */
+  color: #0073e6; /* Blue color for the section heading */
+}
+
+/* Forecast data container: Flexbox layout for horizontal scrolling */
+#forecastData {
+  display: flex; /* Aligns children in a row */
+  gap: 15px; /* Adds spacing between items */
+  overflow-x: auto; /* Allows horizontal scrolling if content overflows */
+  padding-top: 10px; /* Adds padding at the top */
+}
+
+/* Individual weather card styles: Card layout for each forecast day */
+.weather-card {
+  background-color: #0073e6; /* Blue background for each card */
+  color: #fff; /* White text */
+  padding: 15px; /* Padding inside the card */
+  width: 150px; /* Fixed width for the card */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center; /* Centers content in the card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Weather card paragraph styles */
+.weather-card p {
+  margin: 5px 0; /* Adds margin between paragraphs */
+  font-size: 0.9em; /* Smaller font size for text */
+}
+
+/* First paragraph in the weather card: Makes it bold */
+.weather-card p:first-child {
+  font-weight: bold; /* Bold text for the first line */
+}
+
+/* Navbar styles: Creates a horizontal navigation bar */
+.navbar {
+  width: 100%; /* Full width navbar */
+  background-color: #0073e6; /* Blue background */
+  padding: 10px 0; /* Vertical padding */
+}
+
+/* Navbar list styling: Aligns navigation links horizontally */
+.navbar ul {
+  list-style: none; /* Removes bullet points */
+  display: flex; /* Flexbox layout for horizontal alignment */
+  justify-content: center; /* Centers links horizontally */
+  gap: 20px; /* Adds spacing between links */
+}
+
+/* Navbar list item styling: Makes each item inline */
+.navbar ul li {
+  display: inline; /* Inline display for list items */
+}
+
+/* Navbar link styling: Adds text decoration and hover effect */
+.navbar ul li a {
+  color: white; /* White text color */
+  text-decoration: none; /* Removes underline */
+  font-weight: bold; /* Bold font for links */
+}
+
+/* Navbar link hover effect: Underlines links when hovered */
+.navbar ul li a:hover {
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Canvas styles: Ensures the chart fits well on the screen */
+canvas {
+  margin-top: 20px; /* Adds spacing above the canvas */
+  max-width: 100%; /* Ensures the canvas doesn't exceed screen width */
+  height: 300px; /* Fixed height for the canvas */
+}
+
+/* Weather card image styling: Resizes and centers weather icons */
+.weather-card img {
+  width: 50px; /* Fixed width for images */
+  height: 50px; /* Fixed height for images */
+  margin-top: 10px; /* Adds spacing above the image */
+}
