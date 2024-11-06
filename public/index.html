@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar: Provides links to Home and Login pages -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container: Holds the core content of the weather dashboard -->
+  <div class="container">
+    <h1>Weather Dashboard</h1>
+
+    <!-- City Input Field: Text input for users to enter a city name to retrieve weather data -->
+    <input type="text" id="cityInput" placeholder="Enter city name">
+
+    <!-- Get Weather Button: Button to trigger weather data retrieval based on the city entered -->
+    <button onclick="getWeather()">Get Weather</button>
+    
+    <!-- Current Weather Section: Displays the current weather information for the selected city -->
+    <div id="currentWeather" class="weather-section">
+      <h2>Current Weather</h2>
+      <!-- Container for displaying current weather data fetched from the API -->
+      <div id="currentWeatherData"></div>
+    </div>
+    
+    <!-- 5-Day Forecast Section: Shows a 5-day weather forecast for the selected city -->
+    <div id="forecast" class="weather-section">
+      <h2>5-Day Forecast</h2>
+      <!-- Container for displaying 5-day forecast data fetched from the API -->
+      <div id="forecastData"></div>
+    </div>
+    
+    <!-- Temperature Trend Chart Section: Displays a chart for the 5-day temperature trend using Chart.js -->
+    <div class="weather-section">
+      <h2>Temperature Trend (5-Day Forecast)</h2>
+      <!-- Canvas for rendering temperature trend chart -->
+      <canvas id="tempChart"></canvas>
+    </div>
+
+    <!-- Precipitation Probability Chart Section: Shows a chart for 5-day precipitation probabilities using Chart.js -->
+    <div class="weather-section">
+      <h2>Precipitation Probability (5-Day Forecast)</h2>
+      <!-- Canvas for rendering precipitation probability chart -->
+      <canvas id="precipChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Load Chart.js Library: Chart.js is used to create the temperature and precipitation charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Main Script File: Contains JavaScript functions for handling weather data retrieval and chart rendering -->
+  <script src="script.js"></script>
+</body>
+</html>
